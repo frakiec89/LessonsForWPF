@@ -21,7 +21,7 @@ namespace LessonsForWPF
             InitializeComponent();
 
 
-            // коментарий  222
+            // коментарий 111
         }
     }
 }
