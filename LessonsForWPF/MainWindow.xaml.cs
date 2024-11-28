@@ -19,6 +19,9 @@ namespace LessonsForWPF
         public MainWindow()
         {
             InitializeComponent();
+
+
+            // коментарий
         }
     }
 }
