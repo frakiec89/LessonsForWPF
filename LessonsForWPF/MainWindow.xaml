@@ -8,6 +8,68 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <StackPanel>
+            <Label  Content="Просто  текст" ></Label>
+            <TextBlock  Text="Просто  текст" ></TextBlock>
+            
+            <TextBox x:Name="tbTets" 
+                     Text="test"
+                     MinWidth="50"
+                     
+                     ></TextBox>
 
+            <RichTextBox > </RichTextBox>
+
+            <Button x:Name="btnTest" Content="Кнопка"></Button>
+
+            <CheckBox  IsChecked="True"
+                       x:Name="сhbTest"
+                       Content="Выбор"></CheckBox>
+
+            <StackPanel>
+                <RadioButton 
+                     x:Name="rB1"
+                     Content="Выбор" 
+                    IsChecked="False"></RadioButton>  
+               
+                <RadioButton 
+                     x:Name="rB2"
+                     Content="Выбор" 
+                    IsChecked="True"></RadioButton>    
+                
+            </StackPanel>
+
+            <DatePicker Name="dpTest"
+                SelectedDate="2024.11.1"></DatePicker>
+
+            <Slider Value="50" Minimum="10"
+                    Name="slTets"
+                    Maximum="75"
+                    SmallChange="5"
+                    ></Slider>
+
+            <DataGrid>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="test"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <ComboBox>
+                <ComboBoxItem>
+                    <TextBlock>dsdsds</TextBlock>
+                </ComboBoxItem>
+            </ComboBox>
+
+            <ListBox>
+                <ComboBoxItem>
+                    <TextBlock>dsdsds</TextBlock>
+                </ComboBoxItem>
+            </ListBox>
+
+            <Image Width="50" Height="40" 
+                   Source="C:\Users\Ahtyamov\Desktop\lion1.jpg"></Image>
+            
+
+        </StackPanel>
     </Grid>
 </Window>
