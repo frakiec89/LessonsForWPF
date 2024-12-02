@@ -9,5 +9,22 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
 
+        <StackPanel>
+            <Button x:Name="btnTest" 
+                     Content="кнопка1"
+                     Width="100"
+                     Height="50"
+                     Click="btnTest_Click"
+           />    
+            
+            <Button x:Name="btnTest2" 
+                     Content="кнопка2"
+                     Width="100"
+                     Height="50"
+           />
+        </StackPanel>
+        
+     
+               
     </Grid>
 </Window>
