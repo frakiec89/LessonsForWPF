@@ -6,8 +6,71 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LessonsForWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" MinHeight="300" MinWidth="500">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"  />
+            <ColumnDefinition  Width="10*" />
+            <ColumnDefinition  Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="2*"/> 
+            <RowDefinition  Height="10*"/> 
+            <RowDefinition  Height="1*"/> 
+        </Grid.RowDefinitions>
+        
+        <Label 
+            Grid.Column="1" 
+            HorizontalAlignment="Center"
+            > Окно авторизации</Label>
 
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"  />
+                <ColumnDefinition  Width="10" />
+                <ColumnDefinition  Width="10*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition  Height="auto"/>
+                <RowDefinition   Height="auto"/>
+                <RowDefinition  Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0"
+                   HorizontalAlignment="Right" VerticalAlignment="Center"
+                   >Логин</Label>
+
+            <Label Grid.Row="1" Grid.Column="0"
+                   HorizontalAlignment="Right" VerticalAlignment="Center"
+                   >Пароль</Label>
+
+            <TextBox Grid.Row="0" Grid.Column="2"  Margin="5"
+                     Name="tb_Login"
+                     HorizontalContentAlignment="Left"
+                     ></TextBox>
+
+            <TextBox Grid.Row="1" Grid.Column="2" Margin="5"
+                     Name="tb_Password"
+                     HorizontalContentAlignment="Left"
+                     ></TextBox>
+
+            <StackPanel 
+                HorizontalAlignment="Right"
+                Grid.Row="2" Orientation="Horizontal" Grid.Column="2">
+                <Button Margin="5"
+                        Padding="5"
+                        Name="btnAhty"
+                        >Авторизация</Button>
+
+                <Button Margin="5"
+                        Padding="5"
+                        Name="btnAdd"
+                       >Регистарция</Button>   
+
+            </StackPanel>
+
+        </Grid>
+        
     </Grid>
 </Window>
