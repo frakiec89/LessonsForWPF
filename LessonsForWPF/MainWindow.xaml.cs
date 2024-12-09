@@ -33,7 +33,12 @@ namespace LessonsForWPF
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("В разработке ");
+          
+            WindowsAddUser w = new WindowsAddUser();
+            w.Show();
+            this.Close();
+
+
         }
     }
 }
