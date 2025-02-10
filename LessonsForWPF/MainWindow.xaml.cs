@@ -35,8 +35,10 @@ namespace LessonsForWPF
         {
           
             WindowsAddUser w = new WindowsAddUser();
+           
             w.Show();
-            this.Close();
+         
+             this.Close();
 
 
         }
