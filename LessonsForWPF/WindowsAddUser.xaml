@@ -8,5 +8,76 @@
         Title="WindowsAddUser" Height="450" Width="800">
     <Grid>
         <!--// track-->
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"  />
+            <ColumnDefinition  Width="10*" />
+            <ColumnDefinition  Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="2*"/>
+            <RowDefinition  Height="10*"/>
+            <RowDefinition  Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Label 
+            Grid.Column="1" 
+            HorizontalAlignment="Center"
+            >Окно Регистрации</Label>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"  />
+                <ColumnDefinition  Width="10" />
+                <ColumnDefinition  Width="10*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition  Height="auto"/>
+                <RowDefinition   Height="auto"/>
+                <RowDefinition  Height="auto"/>      
+                <RowDefinition  Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0"
+                   HorizontalAlignment="Right" VerticalAlignment="Center"
+                   >Придумайте логин</Label>
+
+            <Label Grid.Row="1" Grid.Column="0"
+                   HorizontalAlignment="Right" VerticalAlignment="Center"
+                   >Придумайте пароль</Label>
+
+            <Label Grid.Row="2" Grid.Column="0"
+                   HorizontalAlignment="Right" VerticalAlignment="Center"
+                   >повторите пароль</Label>   
+
+
+            <TextBox Grid.Row="0" Grid.Column="2"  Margin="5"
+                     Name="tb_Login"
+                     HorizontalContentAlignment="Left"
+                     ></TextBox>
+
+            <TextBox Grid.Row="1" Grid.Column="2" Margin="5"
+                     Name="tb_Password"
+                     HorizontalContentAlignment="Left"
+                     ></TextBox> 
+            
+            <TextBox Grid.Row="2" Grid.Column="2" Margin="5"
+                     Name="tb_Password2"
+                     HorizontalContentAlignment="Left"
+                     ></TextBox>
+
+            <StackPanel 
+                HorizontalAlignment="Right"
+                Grid.Row="3" Orientation="Horizontal" Grid.Column="2">
+                <Button Margin="5"
+                        Padding="5"
+                        Name="btnAddUser"
+                        >Добавить  в  БД</Button>
+
+            </StackPanel>
+
+        </Grid>
+
     </Grid>
 </Window>
