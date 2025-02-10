@@ -21,7 +21,7 @@ namespace LessonsForWPF
             string login = tb_Login.Text;
             string password = tb_Password.Text;
 
-            if (login == "admin" && password == "123")
+            if (App.Users.Any(x=>x.Password == tb_Password.Text && x.Login == tb_Login.Text))
             {
                 MessageBox.Show("Ура");
             }
@@ -35,12 +35,8 @@ namespace LessonsForWPF
         {
           
             WindowsAddUser w = new WindowsAddUser();
-           
             w.Show();
-         
-             this.Close();
-
-
+            this.Close();
         }
     }
 }

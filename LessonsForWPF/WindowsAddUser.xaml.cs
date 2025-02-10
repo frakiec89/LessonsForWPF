@@ -36,6 +36,24 @@ namespace LessonsForWPF
                 return;
             }
 
+
+            User user = new User();
+            user.Login = tb_Login.Text;
+            user.Password = tb_Password2.Text;
+
+            App.Users.Add(user);
+
+            MessageBox.Show("Успешно!");
+
+            MainWindow window = new MainWindow();   
+            window.Show();
+            this.Close();
+
+            // 1 проверка логина
+            // хеширование паролй
+            // верификации  пользвателей  
+            // и тд 
+
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using System.Configuration;
-using System.Data;
+﻿// track
 using System.Windows;
 
 namespace LessonsForWPF
@@ -9,6 +8,13 @@ namespace LessonsForWPF
     /// </summary>
     public partial class App : Application
     {
+        public static List<User> Users {  get; set; } = new List<User>();
+    }
+
+    public class User
+    {
+        public string Login { get; set; }
+        public string Password { get; set; }
     }
 
 }
