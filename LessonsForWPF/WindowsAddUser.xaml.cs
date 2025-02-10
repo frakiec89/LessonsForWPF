@@ -26,7 +26,7 @@ namespace LessonsForWPF
 
             if (tb_Password.Text ==null ||  tb_Password.Text.Length <4)
             {
-                MessageBox.Show("Пароль меньше 3 символов!");
+                MessageBox.Show("Пароль меньше 4 символов!");
                 return;
             }
 
