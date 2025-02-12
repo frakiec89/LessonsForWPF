@@ -1,4 +1,5 @@
 ﻿// track
+using LessonsFor.DB;
 using System.Windows;
 
 
@@ -21,14 +22,26 @@ namespace LessonsForWPF
             string login = tb_Login.Text;
             string password = tb_Password.Text;
 
-            if (App.Users.Any(x=>x.Password == tb_Password.Text && x.Login == tb_Login.Text))
+            try
             {
-                MessageBox.Show("Ура");
+                using MyDbContext myDbContext = new MyDbContext();
+
+                if (myDbContext.Users.Any(x => x.Password == tb_Password.Text && x.Login == tb_Login.Text))
+                {
+                    MessageBox.Show("Ура");
+                }
+                else
+                {
+                    MessageBox.Show("Не  верный логин  и пароль");
+                }
+
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Не  верный логин  и пароль");
+                MessageBox.Show(ex.Message);
             }
+
+           
         }
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)

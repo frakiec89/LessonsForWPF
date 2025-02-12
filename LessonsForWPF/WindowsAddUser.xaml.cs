@@ -1,6 +1,5 @@
-﻿using System.Windows;
-
-
+﻿using LessonsFor.DB;
+using System.Windows;
 // track
 
 namespace LessonsForWPF
@@ -41,14 +40,26 @@ namespace LessonsForWPF
             user.Login = tb_Login.Text;
             user.Password = tb_Password2.Text;
 
-            App.Users.Add(user);
+            try
+            {
+                using MyDbContext db = new MyDbContext();
 
-            MessageBox.Show("Успешно!");
+                db.Users.Add(user);
+                db.SaveChanges();
 
-            MainWindow window = new MainWindow();   
-            window.Show();
-            this.Close();
+                MessageBox.Show("Успешно!");
 
+                MainWindow window = new MainWindow();
+                window.Show();
+                this.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+           
             // 1 проверка логина
             // хеширование паролй
             // верификации  пользвателей  
