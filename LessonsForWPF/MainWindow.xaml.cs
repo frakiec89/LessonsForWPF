@@ -1,6 +1,6 @@
 ﻿// track
+using LessonsForWPF.DB;
 using System.Windows;
-
 
 namespace LessonsForWPF
 {
@@ -13,6 +13,20 @@ namespace LessonsForWPF
         {
             InitializeComponent();
             // я  мастер  тут  ничего не  будет
+
+            DB.MyMyContext context = new DB.MyMyContext();
+
+
+            User user = new User();
+            user.Name = "TestName";
+            user.Email = "TestEmail";
+            user.Password = "TestPassword";
+
+            context.Users.Add(user);
+
+            context.SaveChanges();
+
+
         }
     }
 }
