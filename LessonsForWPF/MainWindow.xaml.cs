@@ -2,7 +2,6 @@
 using LessonsFor.DB;
 using System.Windows;
 
-
 namespace LessonsForWPF
 {
     /// <summary>
@@ -34,14 +33,11 @@ namespace LessonsForWPF
                 {
                     MessageBox.Show("Не  верный логин  и пароль");
                 }
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
-           
         }
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
