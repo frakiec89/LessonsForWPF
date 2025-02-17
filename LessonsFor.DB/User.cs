@@ -11,12 +11,12 @@ namespace LessonsFor.DB
 
         [Key]
         public int  Id { get; set; }
-       
         public string Login { get; set; }
-
-
+        
         [Required]
         [StringLength(100, MinimumLength = 3)]
         public string Password { get; set; }
+        public string Salt { get; set; }
+
     }
 }

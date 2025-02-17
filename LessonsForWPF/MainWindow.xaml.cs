@@ -23,9 +23,9 @@ namespace LessonsForWPF
 
             try
             {
-                using MyDbContext myDbContext = new MyDbContext();
+                UserService userService = new UserService();
 
-                if (myDbContext.Users.Any(x => x.Password == tb_Password.Text && x.Login == tb_Login.Text))
+                if (userService.IsUser(tb_Login.Text , tb_Password.Text))
                 {
                     MessageBox.Show("Ура");
                 }

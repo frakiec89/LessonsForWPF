@@ -42,10 +42,8 @@ namespace LessonsForWPF
 
             try
             {
-                using MyDbContext db = new MyDbContext();
-
-                db.Users.Add(user);
-                db.SaveChanges();
+                UserService userService = new UserService();
+                userService.Add(user);
 
                 MessageBox.Show("Успешно!");
 
