@@ -24,10 +24,13 @@ namespace LessonsForWPF
             try
             {
                 UserService userService = new UserService();
-
-                if (userService.IsUser(tb_Login.Text , tb_Password.Text))
+                if (true)
+                  //  if (userService.IsUser(tb_Login.Text , tb_Password.Text))
                 {
                     MessageBox.Show("Ура");
+                    Winds.MenuWindows menuWindows = new Winds.MenuWindows();
+                    menuWindows.Show();
+                    Close();
                 }
                 else
                 {
