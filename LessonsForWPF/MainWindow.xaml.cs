@@ -31,7 +31,7 @@ namespace LessonsForWPF
                 }
                 else
                 {
-                    MessageBox.Show("Не  верный логин  и пароль");
+                    MessageBox.Show("Не  верный логин  или пароль");
                 }
             }
             catch (Exception ex)
