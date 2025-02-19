@@ -35,8 +35,8 @@
             <Button
                Margin="5"
                Padding="5"
-      
-               >еще не готово1</Button>
+                Name="btnStudents"
+               >Посмотреть список  студентов</Button>
 
 
             <Button

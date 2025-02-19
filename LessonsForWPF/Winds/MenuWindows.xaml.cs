@@ -14,6 +14,14 @@ namespace LessonsForWPF.Winds
             btnBack.Click += BtnBack_Click;
             btnEditUser.Click += BtnEditUser_Click;
             btnAddStudent.Click += BtnAddStudent_Click;
+            btnStudents.Click += BtnStudents_Click;
+        }
+
+        private void BtnStudents_Click(object sender, RoutedEventArgs e)
+        {
+            Winds.StudentsWindow studentsWindow = new Winds.StudentsWindow();
+            studentsWindow.Show();
+            Close();
         }
 
         private void BtnAddStudent_Click(object sender, RoutedEventArgs e)
