@@ -8,7 +8,7 @@ namespace LessonsForWPF
     /// </summary>
     public partial class App : Application
     {
-      
+            //todo поменял  стартовое окно--> Application
     }
 
    

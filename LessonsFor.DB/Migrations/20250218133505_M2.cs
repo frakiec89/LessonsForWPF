@@ -5,7 +5,7 @@
 namespace LessonsFor.DB.Migrations
 {
     /// <inheritdoc />
-    public partial class Mq : Migration
+    public partial class M2 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,7 +17,8 @@ namespace LessonsFor.DB.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Login = table.Column<string>(type: "TEXT", nullable: false),
-                    Password = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false)
+                    Password = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
+                    Salt = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {

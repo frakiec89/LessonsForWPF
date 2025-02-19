@@ -26,12 +26,11 @@
                 Name="btnEditUser"
                 >Рекактировать пользователей</Button>
 
-
             <Button
                Margin="5"
                Padding="5"
-      
-               >еще не готово1</Button>
+                Name="btnAddStudent"
+               >Добавить студента</Button>
 
             <Button
                Margin="5"

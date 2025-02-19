@@ -22,10 +22,11 @@ namespace LessonsForWPF
             string password = tb_Password.Text;
 
             try
-            {
+            { 
+                // todo Убрали  авторизацию времеено
                 UserService userService = new UserService();
                 if (true)
-                  //  if (userService.IsUser(tb_Login.Text , tb_Password.Text))
+                  //  if (userService.IsUser(tb_Login.Text , tb_Password.Text))  
                 {
                     MessageBox.Show("Ура");
                     Winds.MenuWindows menuWindows = new Winds.MenuWindows();

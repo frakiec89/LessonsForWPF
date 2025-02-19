@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LessonsFor.DB.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20250212110405_Mq")]
-    partial class Mq
+    [Migration("20250218133505_M2")]
+    partial class M2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,6 +32,10 @@ namespace LessonsFor.DB.Migrations
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasMaxLength(100)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Salt")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
