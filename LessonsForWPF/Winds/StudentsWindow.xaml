@@ -10,7 +10,36 @@
         <!--// track-->
 
 
-        <DataGrid x:Name="dataGridStudents" Margin="15">
+        <DataGrid  AutoGenerateColumns="False"
+            x:Name="dataGridStudents"
+                  Margin="15">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header=" Имя сутдента" Width="150" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="Фамилия студента"  Width="150" Binding="{Binding FirstName}" />
+                <DataGridTextColumn Header="Группа" Width="150" Binding="{Binding GroupName}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Margin="5"
+                                    Name="btnDelete"
+                                    Click="btnDelete_Click"
+                                    Padding="5" >Удалить</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Margin="5"
+                                    Name="btnChange"
+                                    Click="btnChange_Click"
+                                    Padding="5" >Редактировать</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
             
         </DataGrid>
     </Grid>
