@@ -15,9 +15,8 @@ namespace LessonsForWPF.Winds
 
             Loaded += StudentsWindow_Loaded;
             Closing += StudentsWindow_Closing;
-
         }
-
+        
         private void StudentsWindow_Loaded(object sender, RoutedEventArgs e)
         {
             try
