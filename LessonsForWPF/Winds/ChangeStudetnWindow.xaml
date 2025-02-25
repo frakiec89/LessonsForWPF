@@ -8,5 +8,48 @@
         Title="ChangeStudetnWindow" Height="450" Width="800">
     <Grid>
         <!--// track-->
+
+        <Grid>
+            <!--// track-->
+            <StackPanel>
+               
+                <Border Margin="2" BorderBrush="Black" BorderThickness="2">
+                    <StackPanel Margin="10" Orientation="Horizontal">
+
+                        <Label Margin="5"  >Введите имя</Label>
+                        <TextBox x:Name="tbName" Margin="5" Width="150"></TextBox>
+                    </StackPanel>
+                </Border>
+
+                <Border Margin="2" BorderBrush="Black" BorderThickness="2">
+                    <StackPanel Margin="10" Orientation="Horizontal">
+
+                        <Label Margin="5"  >Введите Фамилию</Label>
+                        <TextBox x:Name="tbFerstName" Margin="5" Width="150"></TextBox>
+                    </StackPanel>
+                </Border>
+
+                <Border Margin="2" BorderBrush="Black" BorderThickness="2">
+                    <StackPanel Margin="10" Orientation="Horizontal">
+
+                        <Label Margin="5"  >Введите Группу</Label>
+                        <TextBox x:Name="tbGruipName" Margin="5" Width="150"></TextBox>
+                    </StackPanel>
+                </Border>
+
+
+                <Button x:Name="btnUpdateStydent"
+                  Margin="15"
+                  Padding="15"
+                  HorizontalAlignment="Left"
+                  >Изменить  в  БД</Button>
+
+
+            </StackPanel>
+
+        </Grid>
+
+
+
     </Grid>
 </Window>

@@ -85,6 +85,20 @@ namespace LessonsForWPF.Winds
                 {
                     ChangeStudetnWindow window = new ChangeStudetnWindow(student);
                     window.ShowDialog();
+
+                    if(window.IsTrueUpdate == true)
+                    {
+                        try
+                        {
+                            using LessonsFor.DB.DBContent.MyContentDBContext dBContext = new LessonsFor.DB.DBContent.MyContentDBContext();
+                            dataGridStudents.ItemsSource = dBContext.Students.ToList();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+
                 }
             }
         }
