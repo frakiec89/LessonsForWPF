@@ -76,7 +76,17 @@ namespace LessonsForWPF.Winds
 
         private void btnChange_Click(object sender, RoutedEventArgs e)
         {
+            var button = sender as Button;
 
+            if (button != null)
+            {
+                var student = button.DataContext as Student;
+                if (student != null)
+                {
+                    ChangeStudetnWindow window = new ChangeStudetnWindow(student);
+                    window.ShowDialog();
+                }
+            }
         }
     }
 }
