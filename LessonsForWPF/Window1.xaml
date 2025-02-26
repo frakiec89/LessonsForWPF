@@ -1,16 +1,17 @@
-﻿<!--// track-->
-<Window x:Class="LessonsForWPF.MainWindow"
+﻿<Window x:Class="LessonsForWPF.Window1"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LessonsForWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="700" Width="800">
+        Title="Window1" Height="450" Width="800">
 
-    
+
+
+
     <Grid>
-
+        <!--// track-->
 
         <StackPanel >
             <Button>Тест1</Button>
@@ -19,9 +20,8 @@
             <Button  Style="{StaticResource ButtonMain}">Тест2</Button>
             <Button  Style="{StaticResource ButtonMain}">Тест2</Button>
             <Button  Style="{StaticResource ButtonMain}">Тест2</Button>
-            
+
         </StackPanel>
-        
-       
+
     </Grid>
 </Window>
